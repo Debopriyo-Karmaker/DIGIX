@@ -29,9 +29,6 @@ This project was built entirely with native web technologies to ensure maximum p
 
 ## 🌐 Live Preview
 
-You can view the live, interactive version of this freelance project here:
-*(Insert your GitHub Pages link here once hosted!)*
-
 ## 📁 Project Structure
 
 ```text
