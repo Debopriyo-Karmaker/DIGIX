@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIGIX — Digital Marketing Agency | Strategic Marketing, Creative Design & Video</title>
+  <meta name="description" content="DIGIX is a full-service digital marketing agency driven by relationships and results. Strategic marketing, creative design, and stunning video production.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;600;700;800;900&family=Black+Ops+One&family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Orbitron:wght@500;600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css?v=55.0">
+</head>
+<body>
+
+  <!-- INTERACTIVE BACKGROUND -->
+  <canvas id="interactiveBg" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none;"></canvas>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <img src="images/digix-logo-white.png" alt="DIGIX" class="preloader-logo">
+  </div>
+
+  <!-- FLOATING SHAPES (Parallax Background) -->
+  <div class="floating-shape shape-circle" data-speed="0.05"></div>
+  <div class="floating-shape shape-square" data-speed="-0.08"></div>
+  <div class="floating-shape shape-ring" data-speed="0.03"></div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo" aria-label="DIGIX Home">
+        <img src="images/digix-logo-white.png" alt="DIGIX Logo" height="36">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#cases">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about">About</a>
+    <a href="#team">Team</a>
+    <a href="#cases">Work</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ===== HERO WITH VIDEO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-video reveal-scale">
+      <video autoplay muted loop playsinline>
+        <source src="images/demo.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-grid"></div>
+    <div class="hero-corner hero-corner--tl"></div>
+    <div class="hero-corner hero-corner--br"></div>
+
+    <div class="hero-content" id="heroContent">
+      <p class="hero-eyebrow"><span>Full-Service Digital Agency</span></p>
+      <h1 id="heroTitle">
+        <!-- Characters injected via JS for stagger animation -->
+      </h1>
+      <p class="hero-sub">Driven by Relationships &amp; Results</p>
+      <div class="hero-cta-group">
+        <a href="#cases" class="btn-primary">View Our Work</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+
+    <a href="#statsBar" class="hero-scroll" aria-label="Scroll down">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </a>
+  </section>
+
+  <!-- ===== STATS COUNTER BAR ===== -->
+  <div class="stats-bar" id="statsBar">
+    <div class="container">
+      <div class="stats-grid stagger" id="statsGrid">
+        <div class="stat-item">
+          <div class="stat-number"><span class="counter" data-target="300">0</span>+</div>
+          <div class="stat-label">Brands Served</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span class="counter" data-target="1000">0</span>+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span class="counter" data-target="20">0</span>+</div>
+          <div class="stat-label">Team Members</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span class="counter" data-target="7">0</span>+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BRAND MARQUEE ===== -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item">Google</div>
+      <div class="marquee-item">Microsoft</div>
+      <div class="marquee-item">Amazon</div>
+      <div class="marquee-item">Nvidia</div>
+      <div class="marquee-item">AMD</div>
+      <div class="marquee-item">Discord</div>
+      <div class="marquee-item">Nissan</div>
+      <div class="marquee-item">KFC</div>
+      <div class="marquee-item">UPS</div>
+      <div class="marquee-item">Google</div>
+      <div class="marquee-item">Microsoft</div>
+      <div class="marquee-item">Amazon</div>
+      <div class="marquee-item">Nvidia</div>
+      <div class="marquee-item">AMD</div>
+      <div class="marquee-item">Discord</div>
+      <div class="marquee-item">Nissan</div>
+      <div class="marquee-item">KFC</div>
+      <div class="marquee-item">UPS</div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section-pad" id="about">
+    <div class="about-grid">
+      <div class="about-visual reveal-left">
+        <img src="images/about_team_1784727622204.png" alt="DIGIX team at work" loading="lazy" class="parallax-img" data-speed="0.1">
+        <div class="img-reveal"></div>
+        <div class="about-visual-overlay"></div>
+      </div>
+      <div class="about-text">
+        <span class="label reveal">Brand Goals</span>
+        <h2 class="split-heading reveal-heading" id="aboutHeading">
+          <span class="word"><span class="word-inner">OUR</span></span><span class="word"><span class="word-inner" style="color:#00e5ff; text-shadow:0 0 15px rgba(0,229,255,0.4);">GOALS</span></span>
+        </h2>
+        <div class="line-accent reveal"></div>
+        <p class="reveal-right">To be the premier one-stop destination for all digital marketing, design and video needs. Leveraging cutting-edge strategies and creativity to elevate brands in the digital world. Seeing the joy of clients who are able to connect with more customers and better tell their brand story.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HORIZONTAL SCROLL TEXT 1 ===== -->
+  <div class="horiz-text-section" id="horizSection">
+    <div class="horiz-text" id="horizText1">
+      INNOVATION • CREATIVITY • EXCELLENCE • INNOVATION • CREATIVITY • EXCELLENCE • INNOVATION • CREATIVITY • EXCELLENCE • INNOVATION • CREATIVITY • EXCELLENCE •
+    </div>
+  </div>
+
+  <!-- ===== VISION / MISSION ===== -->
+  <section class="vm-section">
+    <div class="container">
+      <div class="vm-grid">
+        <div class="vm-card reveal-left">
+          <span class="number">01</span>
+          <h3>Our Vision</h3>
+          <p>To be the leaders in full-service digital transformation, empowering businesses of all sizes to maximize their potential in an evolving landscape.</p>
+        </div>
+        <div class="vm-card reveal-right">
+          <span class="number">02</span>
+          <h3>Our Mission</h3>
+          <p>Through strategic marketing, compelling design and impactful video content, we aim to uplift brands and help them thrive. Whether launching a new venture or taking an established company to new heights, we use our expertise to successfully tell clients' stories and foster deeper connections with their audiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM — EDGY HORIZONTAL SCROLL ===== -->
+  <section class="team-section" id="team">
+    <div class="bg-text parallax-bg-text" data-speed="-0.1">DIGIX</div>
+    <div class="container">
+      <div class="team-header reveal">
+        <p class="label">The People</p>
+        <h2>Our <span class="outline-text">Team</span></h2>
+      </div>
+
+      <div class="team-accordion-wrap reveal-scale">
+        <div class="team-accordion">
+          <!-- Card 1 -->
+          <div class="accordion-item" tabindex="0">
+            <img src="images/sourav%202.jpg" alt="Sourav" loading="lazy">
+            <div class="accordion-content">
+              <h4>Sourav</h4>
+              <span>Founder &amp; CEO</span>
+              <p>With a career spanning content creation, video editing, and graphic design, Shahadat has spearheaded DigiX's growth from a one-person startup to a powerhouse team of over 20 professionals. Over 7 years, he's worked with 300+ brands worldwide.</p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="accordion-item" tabindex="0">
+            <img src="images/Debanjan.jpg" alt="Debanjan" loading="lazy">
+            <div class="accordion-content">
+              <h4>Debanjan</h4>
+              <span>Mentor &amp; Co-founder</span>
+              <p>Throughout a career encompassing video editing, graphic design, and content development, Debanjan has further strengthened DigiX's position as an integral marketing partner within a number of sectors.</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="accordion-item" tabindex="0">
+            <img src="images/topu-2.png" alt="TOPU" loading="lazy">
+            <div class="accordion-content">
+              <h4>TOPU</h4>
+              <span>Co-Founder</span>
+              <p>The video editing wizard with 7 years of service experience in Design &amp; Creative, 100+ satisfied clients and over 1000+ successful projects. Not everyone has a terrific tale to tell — TOPU does.</p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="accordion-item" tabindex="0">
+            <img src="images/sajjat.jpg" alt="Sajjat" loading="lazy">
+            <div class="accordion-content">
+              <h4>Sajjat</h4>
+              <span>Mentor &amp; Co-founder</span>
+              <p>With over five years of experience in video editing, content creation and social media marketing. Sajjat has collaborated with over 100+ brands globally and is committed to boosting traffic and engagement.</p>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="accordion-item" tabindex="0">
+            <img src="images/tamzid.jpg" alt="Tamzid" loading="lazy">
+            <div class="accordion-content">
+              <h4>Tamzid</h4>
+              <span>Co-Founder</span>
+              <p>The creative power behind DigiX — a dynamic force in video editing, graphic design and content development. More than 1000 completed projects and 100+ happy clients. He knows how to bring stories to life.</p>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="accordion-item" tabindex="0">
+            <img src="images/team_member_1784727745684.png" alt="XXXXXX" loading="lazy">
+            <div class="accordion-content">
+              <h4>XXXXXX</h4>
+              <span>Creative Director</span>
+              <p>7 years of expertise in content creation, video production, and social media management. His portfolio includes collaborations with over 100 brands worldwide, producing impactful short films, reels, and long-form videos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HORIZONTAL SCROLL TEXT 2 ===== -->
+  <div class="horiz-text-section">
+    <div class="horiz-text horiz-text-reverse" id="horizText2">
+      BRANDING • MARKETING • DESIGN • BRANDING • MARKETING • DESIGN • BRANDING • MARKETING • DESIGN • BRANDING • MARKETING • DESIGN •
+    </div>
+  </div>
+
+  <!-- ===== CASE STUDIES ===== -->
+  <section class="cases-section section-pad" id="cases">
+    <div class="container">
+      <div class="cases-header reveal">
+        <p class="label">Portfolio</p>
+        <h2><span style="color:#fff;">Case</span> Studies</h2>
+      </div>
+      <div class="cases-grid stagger" id="casesGrid">
+        <div class="case-card reveal-rotate">
+          <img src="images/case_realestate_1784727689659.png" alt="Cinematic Real Estate Video" loading="lazy">
+          <div class="case-card-overlay"><h4>Cinematic Real Estate</h4></div>
+        </div>
+        <div class="case-card reveal-rotate">
+          <img src="images/case_fitness_1784727668769.png" alt="Fitness Campaign" loading="lazy">
+          <div class="case-card-overlay"><h4>Fitness</h4></div>
+        </div>
+        <div class="case-card reveal-rotate">
+          <img src="images/case_wedding_1784727680195.png" alt="Wedding Cinematography" loading="lazy">
+          <div class="case-card-overlay"><h4>Wedding</h4></div>
+        </div>
+        <div class="case-card reveal-rotate">
+          <img src="images/case_desktop_1784727726319.png" alt="Desktop Production" loading="lazy">
+          <div class="case-card-overlay"><h4>Desktop</h4></div>
+        </div>
+        <div class="case-card reveal-scale">
+          <img src="images/case_documentary_1784727736187.png" alt="Short Documentary" loading="lazy">
+          <div class="case-card-overlay"><h4>Short Documentary</h4></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services-section section-pad" id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <p class="label" style="color:#00e5ff !important; text-shadow:0 0 10px rgba(0,229,255,.6);">What We Do</p>
+        <h2><span style="color:#fff;">Our</span> Services</h2>
+        <p class="desc">We provide end-to-end digital solutions designed to elevate your brand. From cinematic video production to data-driven marketing, our team brings creativity and strategy together to deliver exceptional results.</p>
+      </div>
+      
+      <div class="services-grid stagger" id="servicesGrid">
+        <div class="service-card reveal-rotate" onclick="openServiceModal('video')" style="cursor: pointer;">
+          <div class="service-img-wrap">
+            <img src="images/case_desktop_1784727726319.png" alt="Video Editing" loading="lazy">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+            </div>
+            <h4>Video Editing</h4>
+            <p>Cutting, arranging, and enhancing video footage to create cohesive and polished final products that captivate audiences. We specialize in cinematic storytelling that keeps viewers hooked from the first frame to the last.</p>
+          </div>
+        </div>
+        
+        <div class="service-card reveal-rotate" onclick="openServiceModal('graphic')" style="cursor: pointer;">
+          <div class="service-img-wrap">
+            <img src="images/case_wedding_1784727680195.png" alt="Graphic Design" loading="lazy">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h4>Graphic Design</h4>
+            <p>From logos to social posts, we craft stunning visual identities that communicate your brand story with impact and precision. Our designs ensure your brand remains memorable and distinct in a crowded digital space.</p>
+          </div>
+        </div>
+        
+        <div class="service-card reveal-rotate" onclick="openServiceModal('content')" style="cursor: pointer;">
+          <div class="service-img-wrap">
+            <img src="images/case_fitness_1784727668769.png" alt="Content Creation" loading="lazy">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            </div>
+            <h4>Content Creation</h4>
+            <p>Strategic content development that tells your brand's story, drives engagement, and builds deeper connections with your audience. We produce high-quality assets tailored for multi-platform distribution.</p>
+          </div>
+        </div>
+        
+        <div class="service-card reveal-rotate" onclick="openServiceModal('marketing')" style="cursor: pointer;">
+          <div class="service-img-wrap">
+            <img src="images/case_realestate_1784727689659.png" alt="Digital Marketing" loading="lazy">
+          </div>
+          <div class="service-content">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <h4>Digital Marketing</h4>
+            <p>Data-driven strategies combining SEO, social media, and paid advertising to amplify your brand and drive measurable results. We focus on ROI and scaling your digital footprint efficiently.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES MODAL ===== -->
+  <div class="service-modal-overlay" id="serviceModal" onclick="closeServiceModal(event)">
+    <div class="service-modal-content">
+      <button class="modal-close" onclick="closeServiceModal('force')" aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      
+      <div class="modal-split">
+        <div class="modal-left">
+          <img src="" alt="Service" id="modalImg">
+          <div class="modal-img-overlay"></div>
+        </div>
+        
+        <div class="modal-right">
+          <p class="modal-subtitle">What we offer</p>
+          <h3 id="modalTitle">Service Title</h3>
+          <ul class="modal-offerings-interactive" id="modalOfferings">
+             <!-- Populated by JS -->
+          </ul>
+          <div class="modal-cta-wrap">
+            <a href="#contact" class="btn-primary" onclick="closeServiceModal('force')">Start a Project <svg style="margin-left:8px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-col reveal-left">
+        <img src="images/digix-logo-white.png" alt="DIGIX" class="footer-logo-img">
+        <p>A full-service digital agency empowering brands through innovation, creativity, and strategic excellence. We combine marketing smarts with design flair and video magic.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/p/DigiX-100090169273984/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          <a href="https://www.instagram.com/digix_bd?igsh=MWE4YnlkNmwxNzRwMQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+        </div>
+      </div>
+      <div class="footer-col reveal">
+        <h3>Contact</h3>
+        <p><strong style="color:rgba(255,255,255,0.7)">Phone</strong></p>
+        <a href="tel:+8801939133033">+88 019 3913 3033</a>
+        <p style="margin-top:14px"><strong style="color:rgba(255,255,255,0.7)">Location</strong></p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Road+no+1+Nirala+Khulna" target="_blank" rel="noopener noreferrer">Road no 1, Nirala.<br>Khulna, Bangladesh</a>
+        <p style="margin-top:14px"><strong style="color:rgba(255,255,255,0.7)">Website</strong></p>
+        <a href="https://www.digix-bd.com" target="_blank" rel="noopener noreferrer">www.digix-bd.com</a>
+      </div>
+      <div class="footer-col reveal-right">
+        <h3>Stay in Touch</h3>
+        <form class="contact-form" id="contactForm">
+          <input type="email" id="emailInput" placeholder="Your Email Address" required aria-label="Email">
+          <textarea id="messageInput" placeholder="Your Message" required aria-label="Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2024 DIGIX. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===================== PRELOADER =====================
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('preloader').classList.add('done');
+      }, 800);
+    });
+
+    // ===================== CUSTOM CURSOR =====================
+    const cursor = document.getElementById('cursor');
+    const cursorDot = document.getElementById('cursorDot');
+    let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = mouseX + 'px';
+      cursorDot.style.top = mouseY + 'px';
+    });
+
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.15;
+      cursorY += (mouseY - cursorY) * 0.15;
+      cursor.style.left = cursorX + 'px';
+      cursor.style.top = cursorY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // ===================== INTERACTIVE CANVAS BG =====================
+    const bgCanvas = document.getElementById('interactiveBg');
+    const ctx = bgCanvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    function resizeBg() {
+      width = bgCanvas.width = window.innerWidth;
+      height = bgCanvas.height = window.innerHeight;
+      initParticles();
+    }
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.8;
+        this.vy = (Math.random() - 0.5) * 0.8;
+        this.radius = Math.random() * 1.5 + 0.5;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > width) this.vx = -this.vx;
+        if (this.y < 0 || this.y > height) this.vy = -this.vy;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(241, 89, 58, 0.4)';
+        ctx.fill();
+      }
+    }
+    function initParticles() {
+      particles = [];
+      const numParticles = Math.floor((width * height) / 12000);
+      for (let i = 0; i < numParticles; i++) particles.push(new Particle());
+    }
+    window.addEventListener('resize', resizeBg);
+    resizeBg();
+    
+    function drawBg() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+        const dx = particles[i].x - mouseX;
+        const dy = particles[i].y - mouseY;
+        const distToMouse = Math.sqrt(dx*dx + dy*dy);
+        if (distToMouse < 220) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(mouseX, mouseY);
+          ctx.strokeStyle = `rgba(241, 89, 58, ${0.3 * (1 - distToMouse/220)})`;
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+        }
+        for (let j = i + 1; j < particles.length; j++) {
+          const pdx = particles[i].x - particles[j].x;
+          const pdy = particles[i].y - particles[j].y;
+          const pDist = Math.sqrt(pdx*pdx + pdy*pdy);
+          if (pDist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(255, 255, 255, ${0.08 * (1 - pDist/120)})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(drawBg);
+    }
+    drawBg();
+
+    document.querySelectorAll('a, button, .team-card, .case-card, .service-card').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+    });
+
+    // ===================== SCROLL PROGRESS =====================
+    const scrollProgress = document.getElementById('scrollProgress');
+    
+    // ===================== PARALLAX & SCROLL ANIMATIONS =====================
+    const heroContent = document.getElementById('heroContent');
+    const horizSection = document.getElementById('horizSection');
+    const horizText1 = document.getElementById('horizText1');
+    const horizText2 = document.getElementById('horizText2');
+    const parallaxShapes = document.querySelectorAll('.floating-shape');
+    const parallaxTexts = document.querySelectorAll('.parallax-bg-text');
+    const parallaxImages = document.querySelectorAll('.parallax-img');
+
+    window.addEventListener('scroll', () => {
+      const s = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      
+      // Progress bar
+      scrollProgress.style.width = (s / scrollHeight) * 100 + '%';
+
+      // Hero Parallax
+      if (heroContent) {
+        heroContent.style.transform = `translateY(${s * 0.35}px)`;
+        heroContent.style.opacity = Math.max(0, 1 - s / 600);
+      }
+
+      // Horizontal text banners now scroll smoothly and autonomously via CSS keyframes
+
+      // Floating Shapes Parallax
+      parallaxShapes.forEach(shape => {
+        const speed = parseFloat(shape.getAttribute('data-speed'));
+        shape.style.transform = `translateY(${s * speed}px) rotate(${s * speed * 0.5}deg)`;
+      });
+
+      // Background Text Parallax
+      parallaxTexts.forEach(text => {
+        const speed = parseFloat(text.getAttribute('data-speed'));
+        // We use slightly complex calculation to make it move relative to its position in viewport
+        const rect = text.parentElement.getBoundingClientRect();
+        const offset = rect.top - window.innerHeight / 2;
+        text.style.transform = `translate(-50%, calc(-50% + ${offset * speed}px))`;
+      });
+      
+      // Image Parallax
+      parallaxImages.forEach(img => {
+        const speed = parseFloat(img.getAttribute('data-speed'));
+        const rect = img.parentElement.getBoundingClientRect();
+        const offset = rect.top - window.innerHeight / 2;
+        img.style.transform = `scale(1.1) translateY(${offset * speed}px)`;
+      });
+    });
+
+    // ===================== NAVBAR =====================
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ===================== MOBILE MENU =====================
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    function toggleMenu() {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      mobileOverlay.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    mobileOverlay.addEventListener('click', toggleMenu);
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', toggleMenu));
+
+    // ===================== HERO TEXT ANIMATION =====================
+    const heroTitle = document.getElementById('heroTitle');
+    const line1 = 'Digital Marketing';
+    const line2 = 'Agency';
+
+    function createCharSpans(text, startDelay) {
+      return text.split('').map((char, i) => {
+        const span = document.createElement('span');
+        span.className = 'char';
+        span.textContent = char === ' ' ? '\u00A0' : char;
+        span.style.animationDelay = (startDelay + i * 0.04) + 's';
+        return span;
+      });
+    }
+
+    createCharSpans(line1, 0.9).forEach(s => heroTitle.appendChild(s));
+    const line2Span = document.createElement('span');
+    line2Span.className = 'line-2';
+    createCharSpans(line2, 0.9 + line1.length * 0.04 + 0.1).forEach(s => line2Span.appendChild(s));
+    heroTitle.appendChild(line2Span);
+
+    // ===================== INTERSECTION OBSERVER REVEALS =====================
+    const observerOpts = { threshold: 0, rootMargin: '0px 0px 200px 0px' };
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, observerOpts);
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-rotate, .reveal-heading, .stagger, .vm-card, .about-visual, .about-text').forEach(el => obs.observe(el));
+
+    // ===================== COUNTER ANIMATION =====================
+    const counterObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counters = entry.target.querySelectorAll('.counter');
+          counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const duration = 2000;
+            const start = performance.now();
+
+            function updateCounter(now) {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - (1 - progress) * (1 - progress);
+              counter.textContent = Math.round(eased * target);
+              if (progress < 1) requestAnimationFrame(updateCounter);
+            }
+            requestAnimationFrame(updateCounter);
+          });
+          counterObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const statsGrid = document.getElementById('statsGrid');
+    if (statsGrid) counterObs.observe(statsGrid);
+
+
+
+    // ===================== SMOOTH SCROLL =====================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 80;
+          const pos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: pos, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ===================== SERVICES MODAL LOGIC =====================
+    const serviceData = {
+      video: {
+        title: "Video Editing",
+        img: "images/case_desktop_1784727726319.png",
+        offerings: [
+          "YouTube & Social Media Edits",
+          "Cinematic Color Grading",
+          "Motion Graphics & Titles",
+          "Documentary & Short Films",
+          "Corporate Promos & Ads"
+        ]
+      },
+      graphic: {
+        title: "Graphic Design",
+        img: "images/case_wedding_1784727680195.png",
+        offerings: [
+          "Brand Identity & Logos",
+          "Social Media Posters & Carousels",
+          "Print Design (Flyers, Brochures)",
+          "UI/UX Design Mockups",
+          "Thumbnail & Banner Art"
+        ]
+      },
+      content: {
+        title: "Content Creation",
+        img: "images/case_fitness_1784727668769.png",
+        offerings: [
+          "Strategic Storyboarding",
+          "Scriptwriting & Ideation",
+          "UGC (User Generated Content)",
+          "Reels & TikTok Campaigns",
+          "Brand Voice Development"
+        ]
+      },
+      marketing: {
+        title: "Digital Marketing",
+        img: "images/case_realestate_1784727689659.png",
+        offerings: [
+          "Search Engine Optimization (SEO)",
+          "Paid Ads (Meta, Google Ads)",
+          "Social Media Management",
+          "Email Marketing Campaigns",
+          "Performance Analytics & ROI"
+        ]
+      }
+    };
+
+    const modal = document.getElementById('serviceModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImg = document.getElementById('modalImg');
+    const modalOfferings = document.getElementById('modalOfferings');
+
+    window.openServiceModal = function(serviceKey) {
+      const data = serviceData[serviceKey];
+      if(!data) return;
+      
+      modalTitle.textContent = data.title;
+      modalImg.src = data.img;
+      
+      // Populate list
+      modalOfferings.innerHTML = '';
+      data.offerings.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        modalOfferings.appendChild(li);
+      });
+      
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.closeServiceModal = function(e) {
+      if(e === 'force' || e.target === modal) {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    };
+
+  </script>
+
+</body>
+</html>
